@@ -1,6 +1,8 @@
-###############################################
 widgets Widget Advertisement
-###############################################
+================================================================================
+
+Allows you to add an advertisement to your
+widgets area
 
 Maintainer Contact
 -----------------------------------------------
@@ -8,13 +10,18 @@ nicolaas [at] sunnysideup.co.nz
 
 Requirements
 -----------------------------------------------
-SS 2.3+
+see composer.json
 
 
 Documentation
 -----------------------------------------------
-Allows you to add an advertisement to your
-widgets area
+Please contact author for more details.
+
+Any bug reports and/or feature requests will be
+looked at
+
+We are also very happy to provide personalised support
+for this module in exchange for a small donation.
 
 
 Installation Instructions
