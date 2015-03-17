@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="WidgetAdvertisement" namespace="" name="WidgetAdvertisement" abstract="false" final="false" start="5" end="48">
+  <file path="/var/www/_modules/widgets_widgetadvertisement/trunk/docs/en/phpdox/../../.." file="WidgetAdvertisement.php" realpath="/var/www/_modules/widgets_widgetadvertisement/trunk/WidgetAdvertisement.php" size="1363" time="2015-03-14T10:22:14+13:00" unixtime="1426281734" sha1="a11e92dfb3cf2aed27f6575feca7d842ed0eb899" relative="WidgetAdvertisement.php"/>
+  <docblock>
+    <description compact="author nicolaas [at] sunnysideup.co.nz"/>
+  </docblock>
+  <extends full="Widget" namespace="" name="Widget"/>
+  <member name="db" type="array" visibility="public" line="7"/>
+  <member name="has_one" type="array" visibility="public" line="11"/>
+  <member name="has_many" type="array" visibility="public" line="15"/>
+  <member name="many_many" type="array" visibility="public" line="17"/>
+  <member name="belongs_many_many" type="array" visibility="public" line="19"/>
+  <member name="defaults" type="array" visibility="public" line="21"/>
+  <member name="title" type="string" default="''" visibility="public" line="23"/>
+  <member name="cmsTitle" type="string" default="'Advertisement'" visibility="public" line="25"/>
+  <member name="description" type="string" default="'Adds a simple image + link (advertisement) to your widget area.'" visibility="public" line="27"/>
+  <method name="getCMSFields" start="29" end="38" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="Data" start="40" end="46" abstract="false" final="false" static="false" visibility="public"/>
+</class>
