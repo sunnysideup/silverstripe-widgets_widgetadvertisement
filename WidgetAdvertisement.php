@@ -4,33 +4,32 @@
  */
 class WidgetAdvertisement extends Widget {
 
-	static $db = array(
+	private static $db = array(
 		"Hyperlink" => "Varchar(255)"
 	);
 
-	static $has_one = array(
+	private static $has_one = array(
 		"Logo" => "Image"
 	);
 
-	static $has_many = array();
+	private static $has_many = array();
 
-	static $many_many = array();
+	private static $many_many = array();
 
-	static $belongs_many_many = array();
+	private static $belongs_many_many = array();
 
-	static $defaults = array();
+	private static $defaults = array();
 
-	static $title = '';
+	private static $title = '';
 
-	static $cmsTitle = 'Advertisement';
+	private static $cmsTitle = 'Advertisement';
 
-	static $description = 'Adds a simple image + link (advertisement) to your widget area.';
+	private static $description = 'Adds a simple image + link (advertisement) to your widget area.';
 
 	function getCMSFields() {
-		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
-		$dataSet = DataObject::get("File", "{$bt}ClassName{$bt} = 'Image'", "{$bt}Title{$bt}");
-		$dropDownSource = $dataSet->toDropDownMap($index = 'ID', $titleField = 'Title', "--- select file from files and images ---");
-		$fields = new FieldSet();
+		$dataSet = File::get()->filter(array("ClassName" => "Title"))->sort("Title");
+		$dropDownSource = array(0 => "--- select file from files and images ---") + $dataSet->map()->toArray();
+		$fields = new FieldList();
 		$fields->push(new TextField("Hyperlink","Hyperlink (e.g. http://www.sunnysideup.co.nz)"));
 		$fields->push(new HeaderField("MakeSureToUploadImageFirst","Please make sure image is uploaded first in file and images section", 5));
 		$fields->push(new DropdownField("LogoID","Image / Picture / Logo", $dropDownSource));
@@ -38,8 +37,7 @@ class WidgetAdvertisement extends Widget {
 	}
 
 	function Data() {
-		$dos = new DataObjectSet();
-		$dos->Hello = "yyyy";
+		$dos = new ArrayList();
 		$dos->Hyperlink = $this->Hyperlink;
 		$dos->Logo = $this->Logo();
 		return $dos;
