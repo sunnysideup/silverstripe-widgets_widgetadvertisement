@@ -1,1 +1,1 @@
-<% if Hyperlink %><% if Logo %><a href="$Hyperlink.URL">$Logo.SetWidth(200)</a><% end_if %><% end_if %>
+<% with WidgetAdvertisementData %><% if Hyperlink %><% if Logo %><a href="$Hyperlink.URL">$Logo.SetWidth(200)</a><% end_if %><% end_if %><% end_with %>
