@@ -20,7 +20,7 @@ class WidgetAdvertisement extends Widget {
 		$fields = new FieldList();
 		$fields->push(new TextField("Hyperlink","Hyperlink (e.g. http://www.silverstripe.co.nz)"));
 		$fields->push(new HeaderField("MakeSureToUploadImageFirst","Please make sure image is uploaded first in file and images section", 5));
-		$fields->push(new TreeDropdownField("LogoID","Image / Picture / Logo", "Image"));
+		$fields->push(new DropdownField("LogoID","Image / Picture / Logo", array(0 => "--- please select ---") + Image::get()->map()->toArray()));
 		return $fields;
 	}
 
