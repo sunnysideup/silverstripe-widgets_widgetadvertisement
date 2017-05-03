@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<source xmlns="http://xml.phpdox.net/src">
-  <dir name="/var/www/_modules/widgets_widgetadvertisement/trunk">
-    <file name="_config.php" size="452" time="2015-03-14T10:22:14+13:00" unixtime="1426281734" sha1="cb078964fb1afd18743d44023b4c5aa6aa44a57e" xml="tokens/_config.php.xml"/>
-    <file name="WidgetAdvertisement.php" size="1363" time="2015-03-14T10:22:14+13:00" unixtime="1426281734" sha1="a11e92dfb3cf2aed27f6575feca7d842ed0eb899" xml="tokens/WidgetAdvertisement.php.xml"/>
-  </dir>
-</source>
